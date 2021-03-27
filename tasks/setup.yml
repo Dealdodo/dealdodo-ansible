@@ -1,12 +1,16 @@
 ---
 - include_vars: vars.yml
 - name: Create a directory if it does not exist
+  become: yes
   ansible.builtin.file:
     path: /projects
     state: directory
     mode: '0755'
-- name: Git checkout
+- name: Checkout frontend
   ansible.builtin.git:
-    repo: '{{ item.value }}'
-    dest: /projects/{{ item.key }}
-    with_dict: "{{ repositories }}"
+    repo: git@github.com:nickhartjes/dealdodo-frontend.git
+    dest: /projects/frontend
+- name: Checkout backend
+  ansible.builtin.git:
+    repo: git@github.com:nickhartjes/dealdodo.git
+    dest: /projects/backend
