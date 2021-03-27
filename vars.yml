@@ -1,0 +1,13 @@
+gitrepositories:
+  backend: https://github.com/nickhartjes/dealdodo.git
+  frontend: https://github.com/nickhartjes/dealdodo-frontend.git
+repositories:
+ chrome:
+  repository: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+  key_url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+packages:
+ - git
+ - openjdk-11-jdk
+ - nginx
+removepackages:
+ - libreoffice

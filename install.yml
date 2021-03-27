@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  tasks:
+   - include: tasks/setup.yml
+   - include: tasks/apt.yml
