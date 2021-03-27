@@ -45,7 +45,7 @@ sudo apt-get --assume-yes install git
 
 # Clone ansible repo if not already present
 if [ ! -d ".ansible" ]; then
-  git clone https://github.com/nickhartjes/linux-development-environment.git .ansible
+  git clone https://github.com/nickhartjes/dealdodo-ansible.git .ansible
 fi
 
 # Checkout specified branch
